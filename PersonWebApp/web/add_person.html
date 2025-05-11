@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Citizen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        form {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Citizen</h1>
+    
+   
+    <form action="LogicServlet.do" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" required="" placeholder="Name"><br>
+        <input type="text" name="nickname" required="" placeholder="Nickname"><br>
+        <input type="text" name="address" required="" placeholder="Address"><br>
+        <input type="text" name="id" required="" placeholder="ID"><br>
+        <input type="file" name="file" accept="image/*"><br>
+        <input type="hidden" name="op" value="add"><br>
+        <input type="submit" value="ADD"><br>
+    </form>
+        
+</body>
+</html>
